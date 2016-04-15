@@ -19,9 +19,11 @@ public class WindowsSwitchExample {
 		String mainWindow = driver.getWindowHandle();
 		WebElement rssFeed = driver.findElement(By.xpath("//a[contains(@href,'feed')]"));
 		rssFeed.click();
-		String firstWindowTitle = driver.getTitle();
+		//String firstWindowTitle = driver.getTitle();
 		Set<String> windows = driver.getWindowHandles();
+		
 		// First way
+		
 		/*String firstWindow = null;
 		String secondWindow = null;
 		Iterator<String> it = windows.iterator();
@@ -32,6 +34,7 @@ public class WindowsSwitchExample {
 		driver.switchTo().window(secondWindow);*/
 		
 		// second way
+		
 		/*for(String s : windows){
 			if(!mainWindow.equals(s)){
 				driver.switchTo().window(s);

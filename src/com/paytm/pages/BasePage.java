@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -141,5 +142,17 @@ public class BasePage {
 		return isSelected;
 	}
 	
+	 public void scrollToBottom(WebDriver driver) {
+	        ((JavascriptExecutor) driver)
+	                .executeScript("window.scrollTo(0, document.body.scrollHeight)");
+	    }
 	
+	 public void waitForSeconds(int sec){
+		 
+		 try {
+			Thread.sleep(sec*1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	 }
 }

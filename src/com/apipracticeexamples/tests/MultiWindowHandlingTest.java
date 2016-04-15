@@ -37,8 +37,11 @@ public class MultiWindowHandlingTest extends BaseTest {
 	
 	public void testInnovapath(){
 		driver.navigate().to("http://innova-path.com/");
+		
 		MultiWindowHandling multiWindowHandling = PageFactory.initElements(driver, MultiWindowHandling.class);
-		multiWindowHandling.implicityWait(3000);
+		multiWindowHandling.waitForSeconds(10);
+		
+		multiWindowHandling.scrollToBottom(driver);
 		multiWindowHandling.clickOnFacebook();
 		
 		String mainWindow = driver.getWindowHandle();

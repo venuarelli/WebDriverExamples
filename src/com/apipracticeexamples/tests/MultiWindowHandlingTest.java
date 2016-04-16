@@ -34,7 +34,6 @@ public class MultiWindowHandlingTest extends BaseTest {
 	}
 	
 	@Test
-	
 	public void testInnovapath(){
 		driver.navigate().to("http://innova-path.com/");
 		
